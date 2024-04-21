@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import { poppins } from "@/utils/fonts";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { poppins } from '@/utils/fonts';
+import './globals.css';
+import Stepper from '@/components/molecules/stepper';
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,8 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins} p-4`}>{children}</body>
+    <html lang='en'>
+      <body className={`${poppins}`}>{children}
+      </body>
     </html>
   );
 }
