@@ -9,8 +9,8 @@ export default function Home() {
       <section className=''>
         <div  className='relative pb-8'>
           {/* <Image /> */}
-          <div className='p-2'>
-            <h1 className='text-3xl font-bold pb-2'>Ready for an Adventure?</h1>
+          <div className='pt-12 px-4'>
+            <h1 className='text-3xl font-semibold leading-10 pb-2'>Ready for an Adventure?</h1>
             <h2 className='text-xl text-green-400 font-medium'>
               Choose Your City!
             </h2>
