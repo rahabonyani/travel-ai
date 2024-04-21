@@ -10,7 +10,6 @@ export default function Home() {
         <h1 className="text-3xl font-bold pb-2">Ready for an Adventure?</h1>
         <h2 className="text-3xl text-green-400 font-bold">Choose Your City!</h2>
       </div>
-
       <input
         type="text"
         className="rounded-md w-full border-2 border-gray-200 text-sm bg-gray-50"
