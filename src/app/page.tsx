@@ -9,7 +9,12 @@ export default function Home() {
     <StepsPagesLayout step={1}>
       <section className=''>
         <div className='relative pb-8 pt-6 p-4'>
-          <Image alt='Paris' className='absolute  z-0' src={'/paris.jpg'} fill />
+          <Image
+            alt='Paris'
+            className='absolute brightness-50 z-0 object-cover'
+            src={'/paris.jpg'}
+            fill
+          />
           <div className='p-2 relative z-10'>
             <h1 className='text-3xl font-bold pb-2 !text-white'>
               Ready for an Adventure?
@@ -31,11 +36,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='pt-2 p-4'>
-          <h5 className='text-center pb-2'>
+        <div className=''>
+          <h5 className='text-center py-5 text-sm'>
             Or select from most visited cities
           </h5>
-          <div className='flex flex-row flex-wrap gap-3'>
+          <div className='flex flex-row flex-wrap gap-3 px-4'>
             <LocationBox slug='/paris' image={'/paris.jpg'} title='Paris' />
             <LocationBox slug='/london' image={'/london.jpg'} title='London' />
             <LocationBox slug='/milan' image={'/milan.jpg'} title='Milan' />
