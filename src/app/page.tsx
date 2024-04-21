@@ -36,11 +36,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=''>
-          <h5 className='text-center py-5 text-sm'>
+        <div className='px-4'>
+          <h5 className='text-left py-5 text-sm '>
             Or select from most visited cities
           </h5>
-          <div className='flex flex-row flex-wrap gap-3 px-4'>
+          <div className='flex flex-row flex-wrap gap-3 '>
             <LocationBox slug='/paris' image={'/paris.jpg'} title='Paris' />
             <LocationBox slug='/london' image={'/london.jpg'} title='London' />
             <LocationBox slug='/milan' image={'/milan.jpg'} title='Milan' />
