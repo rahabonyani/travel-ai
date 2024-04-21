@@ -2,7 +2,7 @@ import type { StepperProps } from './types';
 
 const Stepper = ({ step }: StepperProps) => {
   return (
-    <div className={`grid grid-cols-4 gap-2 w-full h-1  py-4`}>
+    <div className={`grid grid-cols-4 gap-2 w-full h-1 px-4 py-4`}>
       <Step active={step >= 1} />
       <Step active={step >= 2} />
       <Step active={step >= 3} />
