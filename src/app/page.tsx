@@ -1,6 +1,6 @@
+import SearchInput from "@/components/atoms/input";
 import StepsPagesLayout from "@/components/layouts/steps";
 import LocationBox from "@/components/molecules/locationBox";
-
 import { IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 
@@ -19,7 +19,8 @@ export default function Home() {
             </h2>
           </div>
           <div className="relative overflow-hidden z-20">
-            <input
+            <SearchInput />
+            {/* <input
               placeholder="Quick search for anything"
               type="text"
               className="rounded-md h-10 w-full border-2 pl-9 peer border-gray-200 text-sm bg-gray-50"
@@ -27,7 +28,7 @@ export default function Home() {
             <IconSearch
               className="absolute text-slate-500  top-2 left-2 
           transition-transform duration-300 w-5"
-            />
+            /> */}
           </div>
         </div>
         <div className="pt-5 p-4">
