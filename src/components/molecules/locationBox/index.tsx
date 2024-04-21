@@ -1,12 +1,27 @@
-import Image from "next/image";
-import type { LocationBoxProps } from "./types";
+import Image from 'next/image';
+import type { LocationBoxProps } from './types';
+import Link from 'next/link';
 
-const LocationBox = ({ title, image }: LocationBoxProps) => {
+const LocationBox = ({ title, image, slug }: LocationBoxProps) => {
   return (
-    <div className="relative rounded-2xl w-[48%] h-full min-h-40 overflow-hidden">
-      <Image className="bg-green-200 w-full min-h-40" src={image} alt="" />
-      <h6 className="absolute bottom-4 left-4 text-lg font-medium">{title}</h6>
-    </div>
+    <Link
+      href={`${slug}`}
+      className='relative rounded-3xl w-[48%] h-full min-h-40 overflow-hidden aspect-square'
+    >
+      <Image
+        className='bg-green-200 w-full min-h-40 object-cover'
+        src={image}
+        fill
+        alt=''
+      />
+      <h6
+        className='absolute bottom-0  text-lg font-bold tracking-wide  bg-gradient-to-b 
+      from-slate-900/0 to-slate-800 w-full py-4 text-white px-4
+      '
+      >
+        {title}
+      </h6>
+    </Link>
   );
 };
 
