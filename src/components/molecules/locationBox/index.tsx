@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { LocationBoxProps } from "./types";
 import Link from "next/link";
 
-const LocationBox = ({ title, image, slug }: LocationBoxProps) => {
+export default function LocationBox({ title, image, slug }: LocationBoxProps) {
   return (
     <Link
       href={`${slug}`}
@@ -23,6 +23,4 @@ const LocationBox = ({ title, image, slug }: LocationBoxProps) => {
       </h6>
     </Link>
   );
-};
-
-export default LocationBox;
+}

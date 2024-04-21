@@ -19,7 +19,7 @@ export default function Home() {
             <h1 className="text-3xl font-semibold leading-[150%] pb-4 !text-white">
               Ready for an Adventure?
             </h1>
-            <h2 className="text-xl text-green-400 font-medium">
+            <h2 className="text-xl text-green-500 font-medium">
               Choose Your City!
             </h2>
           </div>
