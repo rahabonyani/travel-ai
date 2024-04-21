@@ -7,7 +7,7 @@ export default function Home() {
     <section className="">
       <h1>Ready for an Adventure?</h1>
       <h2 className="text-green-400">Choose Your City!</h2>
-      <input
+      <input type="text" />
     </section>
   );
 }
