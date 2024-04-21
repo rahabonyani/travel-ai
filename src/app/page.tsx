@@ -9,9 +9,14 @@ export default function Home() {
     <StepsPagesLayout step={1}>
       <section className="">
         <div className="relative pt-[49px] pb-[41px] px-8 before:absolute before:bg-neutral-900 before:w-full before:h-full before:top-0 before:left-0 before:z-10 before:opacity-50">
-          <Image alt="Paris" className="absolute z-0" src={"/paris.jpg"} fill />
+          <Image
+            alt="Paris"
+            className="absolute z-0 object-cover"
+            src={"/paris.jpg"}
+            fill
+          />
           <div className=" relative z-20 pb-4">
-            <h1 className="text-3xl font-semibold pb-4 !text-white">
+            <h1 className="text-3xl font-semibold leading-[150%] pb-4 !text-white">
               Ready for an Adventure?
             </h1>
             <h2 className="text-xl text-green-400 font-medium">
