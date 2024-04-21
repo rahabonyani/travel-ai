@@ -37,7 +37,7 @@ export default function Home() {
         </div>
 
         <div className='px-4'>
-          <h5 className='text-left py-5 text-sm '>
+          <h5 className='text-left py-5 text-sm font-medium'>
             Or select from most visited cities
           </h5>
           <div className='flex flex-row flex-wrap gap-3 '>
