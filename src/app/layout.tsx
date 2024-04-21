@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { poppins } from '@/utils/fonts';
 import './globals.css';
+import Stepper from '@/components/molecules/stepper';
 
 
 export const metadata: Metadata = {
@@ -15,7 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${poppins}`}>{children}</body>
+      <body className={`${poppins}`}>{children}
+      </body>
     </html>
   );
 }
