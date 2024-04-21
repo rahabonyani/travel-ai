@@ -3,7 +3,7 @@ import type { StepsPagesLayoutProps } from './types';
 
 const StepsPagesLayout = ({ children, step }: StepsPagesLayoutProps) => {
   return (
-    <div className='p-4 flex flex-col h-full'>
+    <div className='flex flex-col h-full'>
        
       {children}
       <span className='grow'></span>

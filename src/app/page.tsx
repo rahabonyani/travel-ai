@@ -2,15 +2,18 @@ import StepsPagesLayout from '@/components/layouts/steps';
 import LocationBox from '@/components/molecules/locationBox';
 
 import { IconSearch } from '@tabler/icons-react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <StepsPagesLayout step={1}>
       <section className=''>
-        <div  className='relative pb-8'>
-          {/* <Image /> */}
-          <div className='p-2'>
-            <h1 className='text-3xl font-bold pb-2'>Ready for an Adventure?</h1>
+        <div className='relative pb-8 pt-6 p-4'>
+          <Image alt='Paris' className='absolute  z-0' src={'/paris.jpg'} fill />
+          <div className='p-2 relative z-10'>
+            <h1 className='text-3xl font-bold pb-2 !text-white'>
+              Ready for an Adventure?
+            </h1>
             <h2 className='text-xl text-green-400 font-medium'>
               Choose Your City!
             </h2>
@@ -28,7 +31,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='pt-2'>
+        <div className='pt-2 p-4'>
           <h5 className='text-center pb-2'>
             Or select from most visited cities
           </h5>
