@@ -4,6 +4,7 @@ import LocationBox from "@/components/molecules/locationBox";
 import { IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 
+
 export default function Home() {
   return (
     <StepsPagesLayout step={1}>

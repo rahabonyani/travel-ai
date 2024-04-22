@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import { poppins } from '@/utils/fonts';
 import './globals.css';
-import Stepper from '@/components/molecules/stepper';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${poppins} font-poppins`}>{children}</body>
+      <body >{children}</body>
     </html>
   );
 }
