@@ -2,13 +2,7 @@
 
 import Tag from '@/components/atoms/tag';
 import ItineraryHeader from '@/components/molecules/ItineraryHeader';
-import {
-  IconArrowLeft,
-  IconArrowRight,
-  IconBrush,
-  IconFish,
-  IconWaveSawTool,
-} from '@tabler/icons-react';
+import { IconBrush, IconFish } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -51,7 +45,7 @@ export default function PreferencesPage() {
                 arraySelector={setSelectedGroup}
               />
 
-               <Tag
+              <Tag
                 icon={<IconBrush />}
                 text='Friends'
                 value='friends'
@@ -59,7 +53,7 @@ export default function PreferencesPage() {
                 arraySelector={setSelectedGroup}
               />
 
-               <Tag
+              <Tag
                 icon={<IconBrush />}
                 text='Solo'
                 value='5'
@@ -72,9 +66,7 @@ export default function PreferencesPage() {
           <div className=''>
             <h1>Activities you find most enjoyable</h1>
             <div className='flex flex-wrap gap-3 mt-6'>
-            
-
-<Tag
+              <Tag
                 icon={<IconFish />}
                 text='Beach Vacation'
                 value='beach'
@@ -82,7 +74,7 @@ export default function PreferencesPage() {
                 arraySelector={setSelectedActivities}
               />
 
-               <Tag
+              <Tag
                 icon={<IconBrush />}
                 text='Solo'
                 value='1'
@@ -90,7 +82,7 @@ export default function PreferencesPage() {
                 arraySelector={setSelectedActivities}
               />
 
-               <Tag
+              <Tag
                 icon={<IconBrush />}
                 text='Solo'
                 value='2'
@@ -98,7 +90,7 @@ export default function PreferencesPage() {
                 arraySelector={setSelectedActivities}
               />
 
-               <Tag
+              <Tag
                 icon={<IconBrush />}
                 text='Friends'
                 value='3'
@@ -106,7 +98,7 @@ export default function PreferencesPage() {
                 arraySelector={setSelectedActivities}
               />
 
-               <Tag
+              <Tag
                 icon={<IconBrush />}
                 text='Solo'
                 value='4'
@@ -119,7 +111,7 @@ export default function PreferencesPage() {
         <span className='grow'></span>
         <Link
           href={'/itinerary/result'}
-          className='bg-green-500 text-white rounded-2xl text-center p-3'
+          className='bg-green-500 text-white rounded-2xl text-center p-3 mt-4'
         >
           Next
         </Link>
