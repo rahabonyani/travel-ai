@@ -1,8 +1,11 @@
 import SearchInput from "@/components/atoms/input";
 import LocationBox from "@/components/molecules/locationBox";
 import Image from "next/image";
+import { getI18n } from "@/lib/translate/serverTranslate";
 
-export default function SelectCityPage() {
+export default async function SelectCityPage() {
+  const t = await getI18n();
+
   return (
     <section className="">
       <div className="relative py-8 px-8 before:absolute before:bg-neutral-900 before:w-full before:h-full before:top-0 before:left-0 before:z-10 before:opacity-50">
@@ -20,7 +23,7 @@ export default function SelectCityPage() {
             <span className="text-4xl text-green-300 font-extrabold">Trip</span>
           </h1>
           <h2 className="text-xl text-green-500 font-medium">
-            Choose Your City!
+            {t("choose_Your_City")}
           </h2>
           <div className="relative overflow-hidden z-20 pt-3">
             <SearchInput />
