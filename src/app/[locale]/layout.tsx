@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { getStaticParams } from "@/lib/translate/serverTranslate";
+import { I18nProviderClient } from "@/lib/translate/clientTranslate";
 
 export async function generateStaticParams() {
   return getStaticParams();
@@ -19,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang={params.locale} className={inter.className}>
       <body>
+        <I18nProviderClient locale={params.locale}>
           {children}
+        </I18nProviderClient>
       </body>
     </html>
   );

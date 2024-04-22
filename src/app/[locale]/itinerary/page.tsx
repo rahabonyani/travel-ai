@@ -2,7 +2,7 @@
 
 import SearchInput from "@/components/atoms/input";
 import LocationBox from "@/components/molecules/locationBox";
-import { getI18n } from "@/lib/translate/serverTranslate";
+import { useI18n } from "@/lib/translate/clientTranslate";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -50,8 +50,8 @@ const cities = [
   },
 ];
 
-export default async function SelectCityPage() {
-  const t = await getI18n();
+export default function SelectCityPage() {
+  const t = useI18n();
 
   const [showSearchOverlay, setShowSearchOverly] = useState(false);
   return (
