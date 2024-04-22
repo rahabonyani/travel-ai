@@ -1,12 +1,12 @@
+import ItineraryHeader from '@/components/molecules/ItineraryHeader';
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 import Link from 'next/link';
 
 export default function DurationPage() {
   return (
     <section className='h-full flex-col flex pb-14'>
-      <nav className='flex gap-2 items-center'>
-        <IconArrowLeft /> <div className='grow text-center'> Steper</div>
-      </nav>
+      
+      <ItineraryHeader step={2} />
 
       <div className='flex flex-col mt-4'>
         <div className=' mb-6'>
