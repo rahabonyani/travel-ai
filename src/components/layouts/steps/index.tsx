@@ -1,4 +1,4 @@
-import Stepper from "@/components/molecules/stepper";
+import Stepper from "@/components/atoms/stepper";
 import type { StepsPagesLayoutProps } from "./types";
 
 export default function StepsPagesLayout({

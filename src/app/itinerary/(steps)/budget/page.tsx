@@ -1,17 +1,14 @@
-'use client'
+'use client';
 
+import ItineraryHeader from '@/components/molecules/ItineraryHeader';
+import Stepper from '@/components/atoms/stepper';
 import { IconArrowLeft } from '@tabler/icons-react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'
 
 export default function BudgetPage() {
-  const router = useRouter();
   return (
     <section className='h-full flex-col flex pb-14'>
-      <nav className='flex gap-2 items-center'>
-        <IconArrowLeft onClick={() => router.back()} />{' '}
-        <div className='grow text-center'> Steper</div>
-      </nav>
+      <ItineraryHeader step={1} />
 
       <div className='flex-col flex grow'>
         <div className='mt-4 mb-6'>
