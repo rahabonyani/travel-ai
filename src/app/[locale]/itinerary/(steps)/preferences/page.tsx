@@ -1,13 +1,27 @@
 "use client";
 
-import Tag from "@/components/atoms/tag";
+
+import Tag from "@/src/components/atoms/tag";
+import { useItineraryStore } from "@/src/core/stores/itinerary";
 import { IconBrush, IconFish } from "@tabler/icons-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function PreferencesPage() {
+  const route = useRouter();
+
   const [selectedGroup, setSelectedGroup] = useState<string[]>([]);
   const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
+
+  const setGroupType = useItineraryStore((state) => state.setGroupType);
+  const setActivities = useItineraryStore((state) => state.setActivities);
+
+  const handleSubmit = () => {
+    setGroupType(selectedGroup);
+    setActivities(selectedActivities);
+    route.push("/itinerary/result");
+  };
 
   return (
     <>
@@ -42,8 +56,8 @@ export default function PreferencesPage() {
 
               <Tag
                 icon={<IconBrush />}
-                text="Solo"
-                value="5"
+                text="Family"
+                value="family"
                 array={selectedGroup}
                 arraySelector={setSelectedGroup}
               />
@@ -64,7 +78,7 @@ export default function PreferencesPage() {
               <Tag
                 icon={<IconBrush />}
                 text="Solo"
-                value="1"
+                value="Solo"
                 array={selectedActivities}
                 arraySelector={setSelectedActivities}
               />
@@ -72,7 +86,7 @@ export default function PreferencesPage() {
               <Tag
                 icon={<IconBrush />}
                 text="Solo"
-                value="2"
+                value="Solo2"
                 array={selectedActivities}
                 arraySelector={setSelectedActivities}
               />
@@ -80,7 +94,7 @@ export default function PreferencesPage() {
               <Tag
                 icon={<IconBrush />}
                 text="Friends"
-                value="3"
+                value="friend2"
                 array={selectedActivities}
                 arraySelector={setSelectedActivities}
               />
@@ -88,7 +102,7 @@ export default function PreferencesPage() {
               <Tag
                 icon={<IconBrush />}
                 text="Solo"
-                value="4"
+                value="solo4"
                 array={selectedActivities}
                 arraySelector={setSelectedActivities}
               />
@@ -96,12 +110,12 @@ export default function PreferencesPage() {
           </div>
         </div>
         <span className="grow"></span>
-        <Link
-          href={"/itinerary/result"}
+        <button
+          onClick={handleSubmit}
           className="bg-green-500 text-white rounded-2xl text-center p-3 mt-4"
         >
           Next
-        </Link>
+        </button>
       </section>
     </>
   );

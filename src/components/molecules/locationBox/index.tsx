@@ -2,10 +2,14 @@ import Image from "next/image";
 import type { LocationBoxProps } from "./types";
 import Link from "next/link";
 
-export default function LocationBox({ title, image, slug }: LocationBoxProps) {
+export default function LocationBox({
+  title,
+  image,
+  onClick,
+}: LocationBoxProps) {
   return (
-    <Link
-      href={`${slug}`}
+    <div
+      onClick={onClick}
       className="relative max-w-44 rounded-3xl w-[45%] min-[340px]:w-[48%] h-full max-h-40  overflow-hidden aspect-square"
     >
       <Image
@@ -21,6 +25,6 @@ export default function LocationBox({ title, image, slug }: LocationBoxProps) {
       >
         {title}
       </h6>
-    </Link>
+    </div>
   );
 }

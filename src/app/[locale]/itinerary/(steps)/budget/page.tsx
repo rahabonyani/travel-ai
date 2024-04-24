@@ -1,11 +1,17 @@
 "use client";
 
-import ItineraryHeader from "@/components/molecules/ItineraryHeader";
-import Stepper from "@/components/atoms/stepper";
-import { IconArrowLeft } from "@tabler/icons-react";
-import Link from "next/link";
+import { useItineraryStore } from "@/src/core/stores/itinerary";
+import { useRouter } from "next/navigation";
 
 export default function BudgetPage() {
+  const route = useRouter();
+  const setBudget = useItineraryStore((state) => state.setBudget);
+
+  const handleSaveBudget = (value: number) => {
+    setBudget(value);
+    route.push("/itinerary/duration");
+  };
+
   return (
     <section className=" flex-col flex">
       <div className="flex-col flex grow">
@@ -18,30 +24,30 @@ export default function BudgetPage() {
         </div>
 
         <div className="flex flex-col grow gap-4 ">
-          <Link
-            href={"/itinerary/duration"}
+          <div
+            onClick={() => handleSaveBudget(2)}
             className="rounded-3xl bg-green-100 flex flex-col h-40 justify-end"
           >
             <div className="p-4 text-xl font-semibold">
               <span>I have mid budget</span>
             </div>
-          </Link>
-          <Link
-            href={"/itinerary/duration"}
+          </div>
+          <div
+            onClick={() => handleSaveBudget(3)}
             className="rounded-3xl bg-green-100 flex flex-col h-40 justify-end"
           >
             <div className="p-4 text-xl font-semibold">
               <span>I have cheap budget</span>
             </div>
-          </Link>
-          <Link
-            href={"/itinerary/duration"}
+          </div>
+          <div
+            onClick={() => handleSaveBudget(1)}
             className="rounded-3xl bg-green-100 flex flex-col h-40 justify-end"
           >
             <div className="p-4 text-xl font-semibold">
               <span>I have high budget</span>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     </section>

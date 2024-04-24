@@ -5,5 +5,5 @@ export interface TagProps {
   icon: ReactNode;
   value?: string;
   array?: string[]
-  arraySelector?: Dispatch<SetStateAction<string[]>>;
+  arraySelector: (Dispatch<SetStateAction<string[]>>);
 }

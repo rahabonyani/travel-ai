@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { getStaticParams } from "@/lib/translate/serverTranslate";
-import { I18nProviderClient } from "@/lib/translate/clientTranslate";
+import { getStaticParams } from "@/src/lib/translate/serverTranslate";
+import { I18nProviderClient } from "@/src/lib/translate/clientTranslate";
 
 export async function generateStaticParams() {
   return getStaticParams();
