@@ -1,22 +1,26 @@
-export const cities = [
+export const staticCities = [
   {
-    city: "Paris",
+    name: "Paris",
     country: "France",
-    image: "/paris.jpg",
+    imageUrl: "/paris.jpg",
+    id: "static-paris",
   },
   {
-    city: "Milan",
+    name: "Milan",
     country: "Italy",
-    image: "/milan.jpg",
+    imageUrl: "/milan.jpg",
+    id: "static-milan",
   },
   {
-    city: "Istanbul",
+    name: "Istanbul",
     country: "Turkey",
-    image: "/istanbul.jpg",
+    imageUrl: "/istanbul.jpg",
+    id: "static-istanbul",
   },
   {
-    city: "London",
+    name: "London",
     country: "United Kingdom",
-    image: "/london.jpg",
+    imageUrl: "/london.jpg",
+    id: "static-london",
   },
 ];

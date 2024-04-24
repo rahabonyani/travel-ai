@@ -19,6 +19,9 @@ const config: Config = {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
       },
+      borderRadius: {
+        "2.5xl": "18px",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { LocationBoxProps } from "./types";
-import Link from "next/link";
 
 export default function LocationBox({
   title,
@@ -10,7 +9,7 @@ export default function LocationBox({
   return (
     <div
       onClick={onClick}
-      className="relative max-w-44 rounded-3xl w-[45%] min-[340px]:w-[48%] h-full max-h-40  overflow-hidden aspect-square"
+      className="relative w-[152px] rounded-3xl h-36 overflow-hidden aspect-square"
     >
       <Image
         className="bg-green-200 w-full min-h-40 object-cover"

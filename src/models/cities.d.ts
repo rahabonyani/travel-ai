@@ -1,6 +1,7 @@
 export interface Cities {
   imageUrl: string;
-  title: string;
+  name: string;
+  country: string;
   refrence: string;
   id: string;
 }

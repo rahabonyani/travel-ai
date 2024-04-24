@@ -1,6 +1,6 @@
 "use client";
 
-import { IconArrowLeft } from "@tabler/icons-react";
+import { IconChevronLeft } from "@tabler/icons-react";
 import { usePathname, useRouter } from "next/navigation";
 import Stepper from "../../atoms/stepper";
 
@@ -23,7 +23,7 @@ const ItineraryHeader = () => {
 
   return (
     <nav className="grid grid-cols-[55px,_1fr,_55px] place-items-center justify-items-start">
-      <IconArrowLeft onClick={() => router.back()} />{" "}
+      <IconChevronLeft onClick={() => router.back()} />{" "}
       <Stepper step={handleSteppes()} totalSteps={4} />
     </nav>
   );

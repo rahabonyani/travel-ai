@@ -24,7 +24,7 @@ export default function SelectCityPage() {
   return (
     <section className="relative">
       <div
-        className="relative py-8 px-8 before:absolute before:bg-neutral-900
+        className="relative py-10 px-8 before:absolute before:bg-neutral-900
        before:w-full before:h-full before:top-0 before:left-0 before:z-10 before:opacity-50"
       >
         <Image
@@ -35,16 +35,21 @@ export default function SelectCityPage() {
         />
         <div className=" relative z-20">
           <h1
-            className="text-3xl leading-[150%] pb-4 font-normal !text-white flex flex-row 
-                         max-w-64 flex-wrap gap-3 "
+            className="text-5xl leading-[62px] pb-4 font-normal !text-white flex flex-row 
+                          flex-wrap gap-3 "
           >
-            <span>Let</span>
-            <span className="text-green-300 font-extrabold">AI</span>
-            <span className="whitespace-nowrap">Plan Your</span>
-            <span className="text-4xl text-green-300 font-extrabold">Trip</span>
+            <span> {t("let-ai-plan-your-trip.let")}</span>
+            <span className="text-green-300 font-extrabold">
+              {t("let-ai-plan-your-trip.ai")}
+            </span>
+            <span>{t("let-ai-plan-your-trip.plan")}</span>
+            <span>{t("let-ai-plan-your-trip.your")}</span>
+            <span className=" text-green-300 font-extrabold">
+              {t("let-ai-plan-your-trip.trip")}
+            </span>
           </h1>
-          <h2 className="text-xl text-green-500 font-medium mb-3">
-            {t("choose_Your_City")}
+          <h2 className="text-lg text-white font-normal pb-3">
+            {t("title-Have-spedific-destination-in-mind")}
           </h2>
           <div className="relative overflow-hidden z-20  max-w-md bg-red">
             <SearchInput
@@ -57,11 +62,12 @@ export default function SelectCityPage() {
           </div>
         </div>
       </div>
-      <div className="pt-8 p-4">
-        <h5 className="text-start text-sm pb-3">
-          Or select from most visited cities
+      <div className="pt-9 px-8">
+        <h5 className="text-start font-medium text-gray-800 text-2xl leading-9 pb-3">
+          Most Visited Destination from{" "}
+          <span className="font-bold text-green-500">London</span>
         </h5>
-        <div className="flex flex-row flex-wrap gap-3">
+        <div className="flex flex-row flex-wrap gap-y-3 gap-x-[22px] ">
           <LocationBox
             image={"/paris.jpg"}
             title="Paris"

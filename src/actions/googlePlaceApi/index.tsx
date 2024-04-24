@@ -29,8 +29,11 @@ export async function googlePlaceApi(city: string) {
             throw new Error("Place Details request failed");
           }
           const detailsData = await detailsResponse.json();
+          // Split the string into an array of words
+          const wordsArray = place.description.split(", ");
           const details = {
-            title: place.description,
+            name: wordsArray[0],
+            country: wordsArray[wordsArray.length - 1],
             refrence: detailsData.result.photos[0].photo_reference,
             id: place.place_id,
           };
