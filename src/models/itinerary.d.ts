@@ -1,7 +1,7 @@
 export interface Cities {
-  imageUrl: string;
+  imageUrl?: string;
   name: string;
   country: string;
-  refrence: string;
+  mostVisited?: boolean;
   id: string;
 }

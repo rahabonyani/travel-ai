@@ -1,4 +1,8 @@
-import type { SpinnerProps } from "./types";
+export interface SpinnerProps {
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+}
 
 export default function Spinner({
   className,

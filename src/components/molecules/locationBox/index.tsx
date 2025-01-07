@@ -1,14 +1,16 @@
+import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import type { LocationBoxProps } from "./types";
+import Link from "next/link";
 
-export default function LocationBox({
-  title,
-  image,
-  onClick,
-}: LocationBoxProps) {
+export interface LocationBoxProps {
+  title: string;
+  image: string | StaticImport;
+}
+
+export default function LocationBox({ title, image }: LocationBoxProps) {
   return (
-    <div
-      onClick={onClick}
+    <Link
+      href={`/itinerary/budget?search=${title}`}
       className="relative w-[152px] rounded-3xl h-36 overflow-hidden aspect-square"
     >
       <Image
@@ -24,6 +26,6 @@ export default function LocationBox({
       >
         {title}
       </h6>
-    </div>
+    </Link>
   );
 }

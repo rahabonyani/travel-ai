@@ -1,22 +1,27 @@
-"use client";
-
-import { useI18n } from "@/src/lib/translate/clientTranslate";
+import SearchInput from "@/src/components/atoms/searchInput";
+import { getI18n } from "@/src/lib/translate/serverTranslate";
 import { IconChevronLeft } from "@tabler/icons-react";
-import { useRouter } from "next/navigation";
-import type { ReactNode } from "react";
+import Link from "next/link";
 
-export default function SearchLayout({ children }: { children: ReactNode }) {
-  const router = useRouter();
-  const t = useI18n();
-
+export default async function TestLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const t = await getI18n();
   return (
     <div className="p-4 h-full">
-      <nav className="flex flex-row items-center gap-6 pb-6">
-        <IconChevronLeft onClick={() => router.back()} />{" "}
+      <nav className="flex flex-row items-center gap-6 pb-6 pt-2">
+        <Link href="/itinerary">
+          <IconChevronLeft />
+        </Link>
         <h6 className="text-xl font-medium">
           {t("search-for-your-dream-city")}
         </h6>
       </nav>
+      <div className="pb-2">
+        <SearchInput />
+      </div>
       {children}
     </div>
   );

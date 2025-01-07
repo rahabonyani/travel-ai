@@ -1,26 +1,24 @@
 "use client";
-import type { TagProps } from "./type";
 
-const Tag = ({ text, icon, value = "", arraySelector, array }: TagProps) => {
+import type { Dispatch, ReactNode, SetStateAction } from "react";
+
+export interface TagProps {
+  text: string;
+  icon: ReactNode;
+  onClick: () => void;
+  selected: boolean;
+}
+
+const Tag = ({ text, icon, onClick, selected }: TagProps) => {
   return (
     <div
-      onClick={() => {
-        arraySelector &&
-          value &&
-          arraySelector((prev) => {
-            const index = prev.indexOf(value);
-            if (index === -1) {
-              return [...prev, value];
-            }
-            return prev.filter((item) => item !== value);
-          });
-      }}
+      onClick={onClick}
       className={`${
-        array?.includes(value) ? "text-white bg-green-500" : "text-gray-700 "
+        selected ? "text-white bg-green-500" : "text-green-900 bg-white"
       }
-       px-5 py-3 gap-2 flex items-center font-semibold text-md
+       px-4 py-3 gap-2 flex items-center font-semibold text-md
       border-green-500 transition-colors duration-200
-       rounded-full border `}
+       rounded-2.5xl border-2 `}
     >
       {icon}
       <span>{text}</span>
